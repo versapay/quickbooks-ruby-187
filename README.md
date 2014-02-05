@@ -249,7 +249,7 @@ Sales Rep         | no     | no     | no   | no     | no          |
 Sales Tax         | no     | no     | no   | no     | no          |
 Sales Term        | no    | no    | no  | no    | no         |
 Tax Code     | no    | no    | no  | no    | no         |
-Tax Rate     | no    | no    | no  | no    | no         |
+Tax Rate     | no    | no    | no  | no    | yes         |
 Term     | yes    | yes    | yes  | yes    | yes         |
 Time Activity     | no    | no    | no  | no    | no         |
 Tracking Class    | no    | no    | no  | no    | no         |
