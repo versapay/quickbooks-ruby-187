@@ -1,6 +1,6 @@
 module Quickbooks
   module Service
-    class TaxRate < Base::Service
+    class TaxRate < BaseService
       include ServiceCrud
 
       def default_model_query
