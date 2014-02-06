@@ -36,6 +36,7 @@ require 'quickbooks/model/invoice_line_item'
 require 'quickbooks/model/tax_line_detail'
 require 'quickbooks/model/tax_line'
 require 'quickbooks/model/transaction_tax_detail'
+requier 'quickbooks/model/tax_rate'
 require 'quickbooks/model/invoice'
 require 'quickbooks/model/company_info'
 require 'quickbooks/model/customer'
@@ -82,6 +83,7 @@ require 'quickbooks/service/purchase'
 require 'quickbooks/service/purchase_order'
 require 'quickbooks/service/vendor_credit'
 require 'quickbooks/service/estimate'
+require 'quickbooks/service/tax_rate'
 
 module Quickbooks
   @@logger = nil
