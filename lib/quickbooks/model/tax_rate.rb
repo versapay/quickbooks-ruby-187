@@ -1,7 +1,7 @@
 module Quickbooks
   module Model
     class TaxRate < BaseModel
-      REST_RESOURCE = "tax_rate"
+      REST_RESOURCE = "taxrate"
       XML_NODE = "TaxRate"
 
       xml_accessor :id, :from => 'Id', :as => Integer
