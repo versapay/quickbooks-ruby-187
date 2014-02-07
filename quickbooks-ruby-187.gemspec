@@ -19,7 +19,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'json'
 
   gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'rr',     '~> 1.0.2'
   gem.add_development_dependency 'rspec',  '2.13.0'
   gem.add_development_dependency 'fakeweb'
