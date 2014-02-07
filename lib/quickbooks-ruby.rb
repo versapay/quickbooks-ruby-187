@@ -142,7 +142,7 @@ end
 
 module URI
   def self.encode_www_form_component(str)
-    URI.escape(str)
+    URI.escape(str).gsub('\'', '%27')
   end
 end
 
