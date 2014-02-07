@@ -3,8 +3,8 @@ require 'time'
 module Quickbooks
   module Model
     class MetaData < BaseModel
-      xml_accessor :create_time, :from => 'CreateTime', :as => Time
-      xml_accessor :last_updated_time, :from => 'LastUpdatedTime', :as => Time
+      xml_accessor :create_time, :from => 'CreateTime', :as => DateTime
+      xml_accessor :last_updated_time, :from => 'LastUpdatedTime', :as => DateTime
 
       def to_xml(options = {})
         xml = %Q{<MetaData>}

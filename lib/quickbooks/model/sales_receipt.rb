@@ -9,7 +9,7 @@ module Quickbooks
       xml_accessor :sync_token, :from => 'SyncToken', :as => Integer
       xml_accessor :meta_data, :from => 'MetaData', :as => MetaData
       xml_accessor :doc_number, :from => 'DocNumber'
-      xml_accessor :placed_on, :from => 'TxnDate', :as => Time
+      xml_accessor :placed_on, :from => 'TxnDate', :as => DateTime
 
       xml_accessor :line_items, :from => 'Line', :as => [Line]
       xml_accessor :customer_ref, :from => 'CustomerRef', :as => BaseReference
@@ -20,7 +20,7 @@ module Quickbooks
       xml_accessor :po_number, :from => 'PONumber'
 
       xml_accessor :ship_method_ref, :from => 'ShipMethodRef', :as => BaseReference
-      xml_accessor :ship_date, :from => 'ShipDate', :as => Time
+      xml_accessor :ship_date, :from => 'ShipDate', :as => DateTime
       xml_accessor :tracking_num, :from => 'TrackingNum'
 
       xml_accessor :payment_method_ref, :from => 'PaymentMethodRef', :as => BaseReference

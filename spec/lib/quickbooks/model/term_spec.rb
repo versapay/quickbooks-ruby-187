@@ -6,9 +6,9 @@ describe "Quickbooks::Model::Term" do
     term.id.should eq(11)
     term.sync_token.should eq(0)
     term.meta_data.create_time.
-      should eq(Time.gm(39, 46, 17, 11, 7, 2013, nil, nil, false, "-07:00"))
+      should eq(DateTime.parse("2013-07-11T17:46:39-07:00"))
     term.meta_data.last_updated_time.
-      should eq(Time.gm(42, 46, 17, 11, 7, 2013, nil, nil, false, "-07:00"))
+      should eq(DateTime.parse("2013-07-11T17:46:42-07:00"))
     term.name.should eq("TermForV3Testing-1373590184130")
     term.active.should eq("true")
     term.type.should eq("DATE_DRIVEN")
