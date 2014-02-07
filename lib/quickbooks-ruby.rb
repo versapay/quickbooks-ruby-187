@@ -1,3 +1,5 @@
+require 'bigdecimal'
+require 'json'
 require 'roxml'
 require 'logger'
 require 'nokogiri'
@@ -136,4 +138,32 @@ module Quickbooks
     attr_accessor :start_position, :max_results, :total_count
   end
 
+end
+
+module URI
+  def self.encode_www_form_component(str)
+    URI.escape(str)
+  end
+end
+
+class Object
+  def public_send(method, *args)
+    if respond_to?(method)
+      send(method, args)
+    else
+      method_messing(method, *args)
+    end
+  end
+end
+
+class Time
+  def initialize(*args)
+    result = nil
+    if args.length > 0
+      # raise
+      Time.gm(args[5], args[4], args[3], args[2], args[1], args[0])
+    else
+      super
+    end
+  end
 end

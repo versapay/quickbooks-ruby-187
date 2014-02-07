@@ -6,9 +6,9 @@ describe "Quickbooks::Model::Payment" do
     payment.id.should eq(8748)
     payment.sync_token.should eq(0)
     payment.meta_data.create_time.
-      should eq(Time.new(2013, 7, 11, 17, 51, 41, "-07:00"))
+      should eq(Time.gm(41, 51, 17, 11, 7, 2013, nil, nil, nil, "-07:00"))
     payment.meta_data.last_updated_time.
-      should eq(Time.new(2013, 7, 11, 17, 51, 42, "-07:00"))
+      should eq(Time.gm(42, 51, 17, 11, 7, 2013, nil, nil, nil, "-07:00"))
     payment.txn_date.should eq(Date.new(2013, 7, 11))
     payment.private_note.should eq("Payment smoke test")
     payment.txn_status.should be_nil
