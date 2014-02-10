@@ -17,7 +17,7 @@ module ROXML::ClassMethods::Declarations
         instance_variable_set(attr.instance_variable_name, attr.default)
       end
       result = instance_variable_get(attr.instance_variable_name)
-      if result.respond_to?(:first) && !as.is_a?(Array)
+      if result.is_a?(Array) && !as.is_a?(Array)
         return instance_variable_get(attr.instance_variable_name).first
       else
         return instance_variable_get(attr.instance_variable_name)
@@ -174,28 +174,19 @@ class Object
   end
 end
 
-class Time
-  def initialize(*args)
-    result = nil
-    if args.length > 0
-      Time.gm(args[5], args[4], args[3], args[2], args[1], args[0])
-    else
-      super
-    end
-  end
-end
-
 # Backport of Ruby 1.9.2 URI methods to 1.8.7.
 module URIFormEncoding
 
   def encode_www_form_component( str )
     encoded = URI.encode(str)
+    encoded.gsub!('+', '%20')
     warn "encode_www_form_component #{str} - #{encoded}"
     encoded
   end
 
   def decode_www_form_component( str )
     decoded = URI.decode(str)
+    decoded.gsub!('%20', '+')
     warn "decode_www_form_component: #{str} - #{decoded}"
     decoded
   end
