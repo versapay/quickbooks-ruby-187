@@ -1,22 +1,10 @@
-# Quickbooks-Ruby
+# Quickbooks-Ruby-187
 
-[![Build Status](https://travis-ci.org/ruckus/quickbooks-ruby.png?branch=master)](https://travis-ci.org/ruckus/quickbooks-ruby)
-
-Integration with Quickbooks Online via the Intuit Data Services v3 REST API.
-
-**NOTE**: If you are looking for the v2 API then you need to use my other library - Quickeebooks:
-
-https://github.com/ruckus/quickeebooks
-
-This library communicates with the Quickbooks Data Services `v3` API, documented at:
-
-[Data Services v3](https://developer.intuit.com/docs/0025_quickbooksapi/0050_data_services)
+Backport of quickbooks-ruby for Ruby 1.8.7
 
 ## Requirements
 
-This has been tested on 1.9.3, 2.0.0, and 2.1.0.
-
-Ruby 1.8.7 and 1.9.2 are not supported.
+Ruby 1.8.7
 
 ## Dependencies
 
@@ -26,6 +14,7 @@ Gems:
 * `roxml` : Workhorse for (de)serializing objects between Ruby & XML
 * `nokogiri` : XML parsing
 * `active_model` : For validations
+* `json`
 
 ## Getting Started & Initiating Authentication Flow with Intuit
 
