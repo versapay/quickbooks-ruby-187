@@ -5,6 +5,7 @@ module Quickbooks
       xml_accessor :class_ref, :from => 'ClassRef', :as => BaseReference
       xml_accessor :balance, :from => 'Balance', :as => BigDecimal, :to_xml => Proc.new { |val| val.to_f }
       xml_accessor :discount, :from => 'Discount', :as => DiscountOverride
+      xml_accessor :linked_transactions, :from => 'LinkedTxn', :as => [LinkedTransaction]
 
       reference_setters :item_ref, :class_ref
     end
