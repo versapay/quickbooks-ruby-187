@@ -46,6 +46,7 @@ require 'quickbooks/model/custom_field'
 require 'quickbooks/model/sales_item_line_detail'
 require 'quickbooks/model/sub_total_line_detail'
 require 'quickbooks/model/discount_override'
+require 'quickbooks/model/linked_transaction'
 require 'quickbooks/model/payment_line_detail'
 require 'quickbooks/model/account_based_expense_line_detail'
 require 'quickbooks/model/line'
@@ -58,7 +59,6 @@ require 'quickbooks/model/other_contact_info'
 require 'quickbooks/model/email_address'
 require 'quickbooks/model/web_site_address'
 require 'quickbooks/model/physical_address'
-require 'quickbooks/model/linked_transaction'
 require 'quickbooks/model/invoice_line_item'
 require 'quickbooks/model/tax_line_detail'
 require 'quickbooks/model/tax_line'
@@ -169,7 +169,7 @@ class Object
     if respond_to?(method)
       send(method, args)
     else
-      method_messing(method, *args)
+      method_missing(method, args)
     end
   end
 end
@@ -180,27 +180,22 @@ module URIFormEncoding
   def encode_www_form_component( str )
     encoded = URI.encode(str)
     encoded.gsub!('+', '%20')
-    warn "encode_www_form_component #{str} - #{encoded}"
     encoded
   end
 
   def decode_www_form_component( str )
     decoded = URI.decode(str)
     decoded.gsub!('%20', '+')
-    warn "decode_www_form_component: #{str} - #{decoded}"
     decoded
   end
 
   def encode_www_form( enum )
     encoded = URI.encode(enum)
-    warn "encode_www_form: #{enum.inspect} - #{encoded}"
     encoded
   end
 
   def decode_www_form( str )
-    warn "decode_www_form: #{str}"
     new_str = URI.decode(str)
-    warn new_str
     new_str
   end
 
