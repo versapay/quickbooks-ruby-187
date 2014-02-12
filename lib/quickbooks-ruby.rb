@@ -37,6 +37,7 @@ require 'oauth'
 require 'quickbooks/util/logging'
 require 'quickbooks/util/http_encoding_helper'
 require 'quickbooks/util/name_entity'
+require 'quickbooks/service_handle'
 
 #== Models
 require 'quickbooks/model/base_model'
