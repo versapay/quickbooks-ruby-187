@@ -4,6 +4,7 @@ require "quickbooks/version"
 Gem::Specification.new do |gem|
   gem.name     = "quickbooks-ruby-187"
   gem.version  = Quickbooks::VERSION
+  gem.authors = ["Cody Caughlan", "Troy Surrett"]
 
   gem.homepage = "http://github.com/troysurrett/quickbooks-ruby"
   gem.summary  = "REST API to Quickbooks Online via Intuit Data Services v3, forked to work with Ruby 1.8.7"
