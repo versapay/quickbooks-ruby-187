@@ -13,7 +13,7 @@ module Quickbooks
       @access_token ||= OAuth::AccessToken.new(@oauth_consumer, @intuit_token, @intuit_secret)
     end
 
-    %w(account bill bill_payment company_info credit_memo customer employee
+    %w(account bill bill_payment company_info credit_memo customer disconnect employee
 estimate invoice item payment payment_method purchase purchase_order sales_receipt service_crud
 tax_rate term vendor vendor_credit).each do |service_name|
       ivar_name = "#{service_name}_service"
