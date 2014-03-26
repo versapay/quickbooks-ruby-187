@@ -1,4 +1,8 @@
 describe Quickbooks::Service::BaseService do
+  before do
+    stub_const "Quickbooks::VERSION", "0.0.5"
+  end
+
   describe "#url_for_query" do
     it "correctly encodes the query" do
       subject.realm_id = 1234
