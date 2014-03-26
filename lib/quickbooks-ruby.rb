@@ -112,6 +112,7 @@ require 'quickbooks/service/purchase_order'
 require 'quickbooks/service/vendor_credit'
 require 'quickbooks/service/estimate'
 require 'quickbooks/service/tax_rate'
+require 'quickbooks/service/disconnect'
 
 module Quickbooks
   @@logger = nil
