@@ -56,7 +56,7 @@ spec = Gem::Specification.new do |gem|
   gem.add_dependency 'oauth'
   gem.add_dependency 'roxml'
   gem.add_dependency 'nokogiri', '~> 1.5.0'
-  gem.add_dependency 'activemodel', '3.1.12'
+  gem.add_dependency 'activemodel', '~> 3.2.0'
   gem.add_dependency 'json'
 
   gem.add_development_dependency 'rake'
